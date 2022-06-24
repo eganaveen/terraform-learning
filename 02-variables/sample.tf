@@ -1,1 +1,1 @@
-#customname = "www.custoname.tf.com"
+customname = "www.custoname.tf.com"
