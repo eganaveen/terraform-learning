@@ -6,5 +6,5 @@ variable "demo1" {
   }
 }
 output "output1" {
-  value = var.demo1
+  value = var.demo1.number
 }
