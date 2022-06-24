@@ -9,6 +9,6 @@ output "customname_auto" {
 }
 
 variable "terraform_var" {}
-output "terraform_var" {
-  value = var.terraform_var
-}
+#output "terraform_var" {
+#  value = var.terraform_var
+#}
