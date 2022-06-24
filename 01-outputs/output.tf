@@ -1,6 +1,9 @@
 variable "demo1" {
-  default = "demo1"
-  integer = 100
+  default = {
+    String = "hello"
+    number = 100
+    boolean = true
+  }
 }
 output "output1" {
   value = var.demo1
