@@ -1,5 +1,5 @@
 variable "customname" {}
-output "Zcustomname_output" {
+output "customname_output" {
   value = var.customname
 }
 
@@ -14,6 +14,11 @@ output "terraform_var" {
 }
 
 variable "CLI_VAR" {}
-output "ZCLI_VAR" {
+output "CLI_VAR" {
   value = var.CLI_VAR
+}
+
+variable "SHELL_VAR" {}
+output "SHELL_VAR" {
+  value = var.SHELL_VAR
 }
