@@ -17,5 +17,5 @@ variable "demo2" {
   ]
 }
 output "listout" {
-  value = var.demo2[1]
+  value = var.demo2[2]
 }
