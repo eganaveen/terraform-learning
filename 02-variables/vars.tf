@@ -1,5 +1,5 @@
 variable "customname" {}
-output "customname_output" {
+output "zcustomname_output" {
   value = var.customname
 }
 
