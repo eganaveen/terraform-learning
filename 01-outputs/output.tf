@@ -1,7 +1,7 @@
 variable "demo1" {
   default = {
-    String = "hello"
-    int = 100
+    String = "hello",
+    int = 100,
     boolean = true
   }
 }
