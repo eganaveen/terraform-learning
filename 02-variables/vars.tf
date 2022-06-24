@@ -14,6 +14,6 @@ output "terraform_var" {
 }
 
 variable "CLI_VAR" {}
-output "CLI_VAR" {
+output "ZCLI_VAR" {
   value = var.CLI_VAR
 }
