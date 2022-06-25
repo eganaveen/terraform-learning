@@ -6,7 +6,7 @@ variable "demo1" {
   }
 }
 output "output1" {
-  value = var.demo1["int"]
+  value = var.demo1.boolean
 }
 
 variable "demo2" {
