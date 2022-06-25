@@ -8,3 +8,6 @@ resource "aws_spot_instance_request" "spot_instance" {
   }
 
 }
+output "wwwwwww_private_ip" {
+  value = aws_spot_instance_request.spot_instance.private_ip
+}
