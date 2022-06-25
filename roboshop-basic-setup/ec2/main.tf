@@ -15,7 +15,7 @@ resource "aws_spot_instance_request" "spot_instance" {
       host     = self.public_ip
     }
     inline = [
-      "ansible-pull -U https://github.com/eganaveen/Ansible.git roboshop.yml -e HOSt=localhost -e role_name=${var.COMPONENT}"
+      "ansible-pull -U https://github.com/eganaveen/Ansible.git roboshop.yml -e HOST=localhost -e role_name=${var.COMPONENT}"
     ]
   }
 }
