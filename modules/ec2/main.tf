@@ -6,19 +6,19 @@ resource "aws_instance" "my_instance" {
 #  provisioner "local-exec" {
 #    command = "ls -al"
 #  }
-#  provisioner "remote-exec" {
-#    connection {
-#      type     = "ssh"
-#      user     = "centos"
-#      password = "DevOps321"
-#      host     = self.public_ip
-#    }
-#    inline = [
-#      "ls -al",
-#      "id",
-#      "pwd"
-#    ]
-#  }
+  provisioner "remote-exec" {
+    connection {
+      type     = "ssh"
+      user     = "centos"
+      password = "DevOps321"
+      host     = self.public_ip
+    }
+    inline = [
+      "ls -al",
+      "id",
+      "pwd"
+    ]
+  }
 
 }
 variable "sg" {}
