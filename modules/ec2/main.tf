@@ -5,9 +5,9 @@ resource "aws_instance" "my_instance" {
 
   provisioner "local-exec" {
     command = <<EOF
-      sleep 60
-      cd /home/centos/Ansible
-      ansible-playbook -i ${self.public_ip}, roboshop.yml -e HOST=all -e role_name=frontend -e ansible_user=centos -e ansible_pass=DevOps321
+sleep 60
+cd /home/centos/Ansible
+ansible-playbook -i ${self.public_ip}, roboshop.yml -e HOST=all -e role_name=frontend -e ansible_user=centos -e ansible_pass=DevOps321
     EOF
   }
 
