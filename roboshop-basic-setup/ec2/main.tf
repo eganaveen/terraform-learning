@@ -7,7 +7,15 @@ resource "aws_spot_instance_request" "spot_instance" {
     Name = var.COMPONENT
   }
 
-}
-output "wwwwwww_private_ip" {
-  value = aws_spot_instance_request.spot_instance.private_ip
+  provisioner "remote-exec" {
+    connection {
+      type = "ssh"
+      user = "centos"
+      password = "DevOps321"
+      host = self.public_ip
+    }
+    inline = [
+      "ansible-pull -U https://github.com/eganaveen/Ansible.git roboshop.yml -e HOSt=localhost -e role_name=${var.COMPONENT} -e APP_VERSION=${var.APP_VERSION}"
+    ]
+  }
 }
