@@ -3,5 +3,7 @@ resource "aws_instance" "my_instance" {
   instance_type = "t2.micro"
 }
 output "myec2_ip_address" {
-  value = aws_instance.my_instance.public_ip
+  value = [aws_instance.my_instance.public_ip,
+           aws_instance.my_instance.private_ip
+          ]
 }
